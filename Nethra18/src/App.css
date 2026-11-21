@@ -80,3 +80,127 @@ footer {
   max-width: 100% !important;
   box-sizing: border-box;
 }
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+
+@media screen and (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Main layout */
+  .home-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Navbar */
+  nav, .navbar, .nav-bar {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  nav a, .navbar a, .nav-bar a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Main content */
+  main, .main-content, .content, .home-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 15px;
+  }
+
+  /* Welcome banner / cards */
+  .hero-banner, .welcome-card, .hero {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 20px;
+    margin: 0;
+  }
+
+  /* Text */
+  h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+
+  /* Grid and cards */
+  .course-container,
+  .courses-container,
+  .cards-container,
+  .grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Buttons */
+  button {
+    max-width: 100%;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+
+  .home-main {
+    padding: 10px;
+  }
+
+  .hero-banner, .welcome-card, .hero {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+}
