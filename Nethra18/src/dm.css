@@ -1,0 +1,100 @@
+.motivation-page {
+  background: linear-gradient(180deg, #fdecef 0%, #f8d4de 100%);
+  border-radius: 20px;
+  padding: 32px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motivation-card {
+  background: #fff8f9;
+  border-radius: 24px;
+  padding: 32px 28px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(92, 24, 42, 0.1);
+}
+
+.today-feeling-badge {
+  display: inline-block;
+  background: #f9cbd6;
+  color: #6e1d32;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.motivation-mood-title {
+  margin: 14px 0 6px;
+  font-size: 2rem;
+  color: #4d1524;
+}
+
+.motivation-subtitle {
+  margin: 0 0 18px;
+  color: #7a4b57;
+  font-size: 0.95rem;
+}
+
+.motivation-cloud-banner {
+  background: #fce3ea;
+  color: #6e1d32;
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.motivation-quote-box {
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  background: #fdebf0;
+  border: 1.5px dashed #e3a7b8;
+  border-radius: 16px;
+  color: #4d1524;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.take-feeling-line {
+  margin: 0 0 20px;
+  font-size: 0.88rem;
+  color: #82535f;
+}
+
+.motivation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.next-inspiration-btn {
+  background: #691d30;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  max-width: 260px;
+}
+
+.back-mood-btn {
+  background: transparent;
+  color: #691d30;
+  border: 1px solid #d99aab;
+  border-radius: 999px;
+  padding: 9px 20px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 260px;
+}

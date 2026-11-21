@@ -1,0 +1,43 @@
+.top-header {
+  background-color: #4f1422;
+  color: #fff5f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.header-logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-nav button {
+  background: transparent;
+  border: none;
+  color: #fce8ee;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+
+.header-nav button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.header-heart {
+  color: #f4b6c6;
+  font-size: 1.1rem;
+}

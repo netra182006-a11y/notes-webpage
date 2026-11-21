@@ -1,0 +1,10 @@
+import {Dinesh} from "./dina.js";
+console.log(Dinesh);
+import {name} from"./dina.js";
+console.log(name);
+import {color} from"./dina.js";
+console.log(color);
+import { student } from "./dina.js";
+console.log(student);
+import {add} from"./dina.js";
+    console.log(add);

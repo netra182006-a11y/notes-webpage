@@ -1,0 +1,328 @@
+/* ==============================
+   MOOD TRACKER MAIN PAGE
+============================== */
+
+
+ .mood-tracker-page {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: linear-gradient(180deg, #fff5f7 0%, #fce8ee 100%);
+  border-radius: 20px;
+  padding: 28px;
+
+  box-sizing: border-box;
+  text-align: center;
+  color: #4a1925;
+}
+
+
+/* ==============================
+   MOOD PILL
+============================== */
+
+.mood-pill {
+  display: inline-block;
+  background: #f8cdd8;
+  color: #6d1d32;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.mood-tracker-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mood-tracker-header h2 {
+  margin: 0 0 8px;
+  font-size: 1.9rem;
+  color: #4a1925;
+}
+
+.mood-tracker-header p {
+  margin: 0 0 26px;
+  color: #754752;
+  font-size: 0.95rem;
+}
+
+
+/* ==============================
+   MOOD CARDS GRID
+   2 CARDS PER ROW
+============================== */
+
+.mood-clouds-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  align-items: stretch;
+}
+
+
+/* ==============================
+   RECTANGULAR MOOD CARD
+============================== */
+
+.mood-cloud-card {
+  background: #ffffff;
+  border: 1px solid #f4d4dc;
+  border-radius: 20px;
+
+  padding: 28px 24px;
+
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 125px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+
+  align-items: center;
+  column-gap: 22px;
+
+  min-height: 175px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 6px 16px rgba(109, 29, 50, 0.06);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+/* ==============================
+   CARD HOVER
+============================== */
+
+.mood-cloud-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 22px rgba(109, 29, 50, 0.12);
+}
+
+
+/* ==============================
+   CLOUD SHAPE
+   KEEP THE ORIGINAL CLOUD
+============================== */
+
+.cloud-shape {
+  width: 112px;
+  height: 68px;
+
+  border-radius: 50px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 0;
+
+  grid-column: 1;
+  grid-row: 1 / 3;
+
+  flex-shrink: 0;
+}
+
+
+/* CLOUD BUBBLES */
+
+.cloud-shape::before,
+.cloud-shape::after {
+  content: "";
+
+  position: absolute;
+  background: inherit;
+
+  border-radius: 50%;
+}
+
+
+/* LEFT CLOUD BUBBLE */
+
+.cloud-shape::before {
+  width: 46px;
+  height: 46px;
+
+  top: -18px;
+  left: 16px;
+}
+
+
+/* RIGHT CLOUD BUBBLE */
+
+.cloud-shape::after {
+  width: 54px;
+  height: 54px;
+
+  top: -22px;
+  right: 14px;
+}
+
+
+/* ==============================
+   CLOUD FACE
+============================== */
+
+.cloud-face {
+  position: relative;
+  z-index: 1;
+
+  font-weight: 700;
+  color: #4a1925;
+
+  font-size: 0.95rem;
+}
+
+
+/* ==============================
+   MOOD NAME
+============================== */
+
+.mood-name {
+  grid-column: 2;
+  grid-row: 1;
+
+  align-self: end;
+  text-align: left;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  color: #4a1925;
+}
+
+
+/* ==============================
+   MOOD DESCRIPTION
+============================== */
+
+.mood-tagline {
+  grid-column: 2;
+  grid-row: 2;
+
+  align-self: start;
+  text-align: left;
+
+  font-size: 0.88rem;
+  color: #7d5660;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+  .mood-tracker-page {
+    padding: 25px;
+  }
+
+  .mood-clouds-grid {
+    gap: 18px;
+  }
+
+  .mood-cloud-card {
+    grid-template-columns: 100px minmax(0, 1fr);
+    column-gap: 15px;
+
+    padding: 22px 18px;
+    min-height: 155px;
+  }
+
+  .cloud-shape {
+    transform: scale(0.9);
+  }
+
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media (max-width: 650px) {
+
+  .mood-tracker-page {
+    padding: 20px 15px;
+    border-radius: 16px;
+  }
+
+  .mood-tracker-header h2 {
+    font-size: 1.55rem;
+  }
+
+  .mood-clouds-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .mood-cloud-card {
+    grid-template-columns: 110px minmax(0, 1fr);
+
+    min-height: 145px;
+    padding: 20px;
+
+    column-gap: 15px;
+  }
+
+  .cloud-shape {
+    transform: scale(1);
+  }
+
+  .mood-name {
+    font-size: 1.05rem;
+  }
+
+  .mood-tagline {
+    font-size: 0.82rem;
+  }
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media (max-width: 380px) {
+
+  .mood-tracker-page {
+    padding: 15px 10px;
+  }
+
+  .mood-cloud-card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    padding: 16px 12px;
+    column-gap: 10px;
+  }
+
+  .cloud-shape {
+    transform: scale(0.85);
+  }
+
+}
