@@ -81,94 +81,150 @@ footer {
   box-sizing: border-box;
 }
 
+
 /* ===== MOBILE RESPONSIVE FIX ===== */
 
 @media screen and (max-width: 768px) {
 
-  html, body {
+  html,
+  body,
+  #root {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    min-height: 100dvh;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 
   * {
     box-sizing: border-box;
   }
 
-  /* Main layout */
-  .home-main {
+  /* App Layout */
+  .app {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 15px;
-    gap: 15px;
+    min-height: 100dvh;
   }
 
-  /* Sidebar */
+  /* Main Content Layout */
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    flex: 1;
+  }
+
+  /* Hide desktop sidebar */
   .sidebar {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    display: none !important;
   }
 
-  /* Navbar */
-  nav, .navbar, .nav-bar {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+  /* Main page area */
+  .page-area {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-area > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Main sections */
+  .main,
+  .home-main,
+  .main-content,
+  .home-content,
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0;
+    padding: 15px !important;
+  }
+
+  /* Navigation */
+  nav,
+  .navbar,
+  .nav-bar {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
     padding: 12px;
-    gap: 10px;
+    gap: 8px;
   }
 
-  nav a, .navbar a, .nav-bar a {
+  nav a,
+  .navbar a,
+  .nav-bar a {
     font-size: 14px;
     padding: 8px;
-  }
-
-  /* Main content */
-  main, .main-content, .content, .home-content {
-    width: 100%;
+    text-align: center;
+    white-space: normal;
     max-width: 100%;
-    min-width: 0;
-    margin: 0;
-    padding: 15px;
   }
 
-  /* Welcome banner / cards */
-  .hero-banner, .welcome-card, .hero {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    padding: 20px;
+  /* Cards and banners */
+  .hero-banner,
+  .welcome-card,
+  .hero,
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     margin: 0;
+    padding: 18px;
   }
 
-  /* Text */
+  /* Headings */
   h1 {
-    font-size: 30px;
+    font-size: clamp(24px, 7vw, 32px);
     line-height: 1.3;
     overflow-wrap: break-word;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: clamp(20px, 5vw, 26px);
+    line-height: 1.4;
   }
 
+  h3 {
+    font-size: 19px;
+  }
+
+  /* Paragraphs */
   p {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-wrap: break-word;
   }
 
-  /* Grid and cards */
+  /* Grid Layout */
   .course-container,
   .courses-container,
   .cards-container,
   .grid {
+    display: grid;
     grid-template-columns: 1fr !important;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   /* Images */
@@ -180,27 +236,57 @@ footer {
   /* Buttons */
   button {
     max-width: 100%;
+    white-space: normal;
   }
+
+  /* Inputs */
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  /* Footer */
+  footer {
+    width: 100%;
+    max-width: 100%;
+    margin-top: auto;
+  }
+
 }
 
-/* Small phones */
+/* ===== SMALL MOBILE SCREENS ===== */
+
 @media screen and (max-width: 480px) {
 
-  .home-main {
-    padding: 10px;
+  .main,
+  .home-main,
+  .main-content,
+  .home-content,
+  main {
+    padding: 12px !important;
   }
 
-  .hero-banner, .welcome-card, .hero {
-    padding: 16px;
+  .hero-banner,
+  .welcome-card,
+  .hero,
+  .card {
+    padding: 15px !important;
     border-radius: 15px;
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   h2 {
     font-size: 21px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 
 }
